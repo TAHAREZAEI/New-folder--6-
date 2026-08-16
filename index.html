@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>گالریا | آرشیو — کاتالوگ اشیای هنری خانه</title>
+<meta name="description" content="گالریا؛ آرشیوی از مجسمه، ساعت دیواری، تابلو و آینه‌های دست‌ساز. کاتالوگی برای خانه‌ای با نظم و سلیقه.">
+<meta name="theme-color" content="#ECE7DA">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23ECE7DA%22/><text x=%2250%22 y=%2268%22 font-size=%2255%22 text-anchor=%22middle%22 fill=%22%232F3E7A%22 font-family=%22serif%22>G</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;600;700&family=Vazirmatn:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">رفتن به محتوای اصلی</a>
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+<!-- Thin index ticker -->
+<div class="index-bar">
+  <div class="index-track">
+    <span>۰۱ — ارسال سراسری کشور</span><span>۰۲ — ضمانت اصالت هر اثر</span><span>۰۳ — پشتیبانی هفت روز هفته</span><span>۰۴ — بسته‌بندی گالری</span>
+    <span>۰۱ — ارسال سراسری کشور</span><span>۰۲ — ضمانت اصالت هر اثر</span><span>۰۳ — پشتیبانی هفت روز هفته</span><span>۰۴ — بسته‌بندی گالری</span>
+  </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <button class="menu-toggle" id="menuToggle" aria-label="باز کردن منو" aria-expanded="false"><span></span><span></span><span></span></button>
+
+    <a href="#hero" class="logo">
+      <span class="logo-index">N°01</span>
+      <span class="logo-text">گالریا<em>ARCHIVE OF OBJECTS</em></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="منوی اصلی">
+      <ul>
+        <li><span class="nav-idx">۰۱</span><a href="#hero" class="nav-link active" data-nav>خانه</a></li>
+        <li><span class="nav-idx">۰۲</span><a href="#categories" class="nav-link" data-nav>دسته‌بندی‌ها</a></li>
+        <li><span class="nav-idx">۰۳</span><a href="#featured" class="nav-link" data-nav>کاتالوگ</a></li>
+        <li><span class="nav-idx">۰۴</span><a href="#story" class="nav-link" data-nav>درباره ما</a></li>
+        <li><span class="nav-idx">۰۵</span><a href="#testimonials" class="nav-link" data-nav>مشتریان</a></li>
+        <li><span class="nav-idx">۰۶</span><a href="#footer" class="nav-link" data-nav>تماس</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="جستجو" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <button class="icon-btn account-btn" aria-label="حساب کاربری">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 20c1.7-3.6 5-5.4 7.5-5.4s5.8 1.8 7.5 5.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <button class="icon-btn cart-btn" id="cartBtn" aria-label="سبد خرید">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16l-1.4 10.2a2 2 0 0 1-2 1.8H7.4a2 2 0 0 1-2-1.8L4 7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 7a4 4 0 0 1 8 0" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="search-panel" id="searchPanel">
+    <div class="container search-inner">
+      <span class="search-idx">search /</span>
+      <input type="search" placeholder="جستجوی مجسمه، ساعت، تابلو، آینه…" aria-label="جستجو در گالریا" id="searchInput">
+      <button class="btn btn-primary btn-sm" id="searchSubmit">جستجو</button>
+      <button class="search-close" id="searchClose" aria-label="بستن جستجو">×</button>
+    </div>
+  </div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero-editorial" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <p class="index-tag">N°01 <span>—</span> کلکسیون بهار ۱۴۰۴</p>
+        <h1>آرشیوی از<br>اشیای <span class="serif-italic">ماندگار</span><br>برای خانه</h1>
+        <p class="hero-desc">هر اثر در این کاتالوگ، شماره‌ی خودش را دارد؛ از مجسمه گرفته تا آینه. گالریا اشیایی می‌سازد که به‌جای پر کردن فضا، به آن معنا می‌دهند.</p>
+        <div class="hero-actions">
+          <a href="#featured" class="btn btn-primary">ورود به کاتالوگ</a>
+          <a href="#story" class="btn btn-line">درباره گالریا</a>
+        </div>
+        <ul class="hero-index-list">
+          <li><a href="#featured" data-cat-filter="statue"><span>۰۱</span>مجسمه</a></li>
+          <li><a href="#featured" data-cat-filter="clock"><span>۰۲</span>ساعت دیواری</a></li>
+          <li><a href="#featured" data-cat-filter="art"><span>۰۳</span>تابلو دیواری</a></li>
+          <li><a href="#featured" data-cat-filter="mirror"><span>۰۴</span>آینه دکوراتیو</a></li>
+        </ul>
+      </div>
+
+      <div class="hero-collage reveal" data-reveal-delay="150">
+        <figure class="collage-a">
+          <img src="https://picsum.photos/seed/galleria2-hero-a/620/760" alt="مجسمه شاخص کاتالوگ گالریا" loading="eager">
+          <figcaption>Fig. 01 — بانوی آرام</figcaption>
+        </figure>
+        <figure class="collage-b">
+          <img src="https://picsum.photos/seed/galleria2-hero-b/420/520" alt="تابلو دیواری کاتالوگ گالریا">
+          <figcaption>Fig. 02 — غروب کویر</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY STRIP -->
+  <section class="cat-strip" id="categories">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="index-tag">N°02 <span>—</span> مرور بر اساس دسته</p>
+        <h2>چهار قفسه‌ی آرشیو</h2>
+      </div>
+    </div>
+    <div class="cat-track">
+      <a href="#featured" class="cat-tile reveal" data-cat-filter="statue">
+        <img src="https://picsum.photos/seed/galleria2-cat-statue/520/680" alt="مجسمه">
+        <span class="cat-tile-idx">۰۱</span>
+        <span class="cat-tile-title">مجسمه</span>
+      </a>
+      <a href="#featured" class="cat-tile reveal" data-reveal-delay="80" data-cat-filter="clock">
+        <img src="https://picsum.photos/seed/galleria2-cat-clock/520/680" alt="ساعت دیواری">
+        <span class="cat-tile-idx">۰۲</span>
+        <span class="cat-tile-title">ساعت دیواری</span>
+      </a>
+      <a href="#featured" class="cat-tile reveal" data-reveal-delay="160" data-cat-filter="art">
+        <img src="https://picsum.photos/seed/galleria2-cat-art/520/680" alt="تابلو دیواری">
+        <span class="cat-tile-idx">۰۳</span>
+        <span class="cat-tile-title">تابلو دیواری</span>
+      </a>
+      <a href="#featured" class="cat-tile reveal" data-reveal-delay="240" data-cat-filter="mirror">
+        <img src="https://picsum.photos/seed/galleria2-cat-mirror/520/680" alt="آینه دکوراتیو">
+        <span class="cat-tile-idx">۰۴</span>
+        <span class="cat-tile-title">آینه دکوراتیو</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FEATURED / CATALOG GRID -->
+  <section class="featured" id="featured">
+    <div class="container">
+      <div class="section-head with-filter reveal">
+        <div>
+          <p class="index-tag">N°03 <span>—</span> صفحات کاتالوگ</p>
+          <h2>آثار این فصل</h2>
+        </div>
+        <div class="filter-tabs" id="filterTabs" role="tablist" aria-label="فیلتر محصولات">
+          <button class="active" data-filter="all">همه</button>
+          <button data-filter="statue">مجسمه</button>
+          <button data-filter="clock">ساعت</button>
+          <button data-filter="art">تابلو</button>
+          <button data-filter="mirror">آینه</button>
+        </div>
+      </div>
+
+      <div class="index-grid" id="productGrid"><!-- injected by script.js --></div>
+    </div>
+  </section>
+
+  <!-- FEATURE / COUNTER ROW -->
+  <section class="counter-row">
+    <div class="container counter-grid">
+      <div class="counter-item reveal">
+        <span class="counter-idx">۰۱</span>
+        <h4>ارسال سراسری</h4>
+        <p>بسته‌بندی ایمن مخصوص اشیای شکستنی</p>
+      </div>
+      <div class="counter-item reveal" data-reveal-delay="80">
+        <span class="counter-idx">۰۲</span>
+        <h4>ضمانت اصالت</h4>
+        <p>گواهی اصالت و شماره سریال برای هر اثر</p>
+      </div>
+      <div class="counter-item reveal" data-reveal-delay="160">
+        <span class="counter-idx">۰۳</span>
+        <h4>تیراژ محدود</h4>
+        <p>هر کلکسیون تنها یک‌بار تولید می‌شود</p>
+      </div>
+      <div class="counter-item reveal" data-reveal-delay="240">
+        <span class="counter-idx">۰۴</span>
+        <h4>پشتیبانی دائم</h4>
+        <p>مشاوره چیدمان متناسب با فضای خانه</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="story-editorial" id="story">
+    <img src="https://picsum.photos/seed/galleria2-atelier/1600/900" alt="کارگاه ساخت آثار گالریا" class="story-bg">
+    <div class="container">
+      <div class="story-panel reveal">
+        <p class="index-tag">N°04 <span>—</span> درباره گالریا</p>
+        <h2>آرشیوی که در کارگاه متولد شد</h2>
+        <p>گالریا از دل یک کارگاه کوچک آغاز شد؛ جایی که هنرمندان با رزین، برنز، چوب گردو و بوم، اشیایی می‌سازند که بخشی از روایت خانه‌ی شما می‌شوند.</p>
+        <div class="story-stats">
+          <div class="stat"><span class="stat-num" data-count="8">0</span><span class="stat-label">سال تجربه</span></div>
+          <div class="stat"><span class="stat-num" data-count="312">0</span><span class="stat-label">اثر هنری</span></div>
+          <div class="stat"><span class="stat-num" data-count="12500">0</span><span class="stat-label">مشتری راضی</span></div>
+        </div>
+        <a href="#footer" class="btn btn-line">آشنایی با تیم گالریا</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW ARRIVALS -->
+  <section class="arrivals" id="arrivals">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="index-tag">N°05 <span>—</span> تازه از راه رسیده</p>
+        <h2>جدیدترین صفحات آرشیو</h2>
+      </div>
+    </div>
+    <div class="arrivals-track" id="arrivalsTrack"><!-- injected by script.js --></div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="index-tag">N°06 <span>—</span> صدای مشتریان</p>
+      </div>
+      <div class="testi-wrap reveal">
+        <div class="testi-slider" id="testiSlider">
+          <blockquote class="testi-slide active">
+            <p>«مجسمه‌ای که از گالریا خریدم دقیقاً همون چیزی بود که تو ذهنم داشتم. کیفیت رزین و پرداخت برنز واقعاً حرفه‌ای بود.»</p>
+            <footer><span class="testi-name">مهسا رضایی</span><span class="testi-role">Tehran / 2026</span></footer>
+          </blockquote>
+          <blockquote class="testi-slide">
+            <p>«ساعت دیواری چوبی که سفارش دادم عین عکس‌ها بود، حتی بهتر. بسته‌بندی هم فوق‌العاده مطمئن بود.»</p>
+            <footer><span class="testi-name">آرمین کاوه</span><span class="testi-role">Isfahan / 2026</span></footer>
+          </blockquote>
+          <blockquote class="testi-slide">
+            <p>«تابلوی «غروب کویر» رو برای پذیرایی خونه گرفتم، همه مهمون‌ها اول چیزی که ازش می‌پرسن همینه!»</p>
+            <footer><span class="testi-name">نگار احمدی</span><span class="testi-role">Shiraz / 2025</span></footer>
+          </blockquote>
+        </div>
+        <div class="testi-controls">
+          <button class="testi-arrow" id="testiPrev" aria-label="نظر قبلی">‹</button>
+          <div class="testi-dots" id="testiDots"></div>
+          <button class="testi-arrow" id="testiNext" aria-label="نظر بعدی">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section class="insta-strip">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="index-tag">N°07 <span>—</span> دنبال‌مان کنید</p>
+        <h2>گالریا@</h2>
+      </div>
+      <div class="insta-grid">
+        <a href="#" class="insta-item reveal"><img src="https://picsum.photos/seed/galleria2-insta-1/360/360" alt="اثر گالریا"><span>Fig. 01</span></a>
+        <a href="#" class="insta-item reveal" data-reveal-delay="60"><img src="https://picsum.photos/seed/galleria2-insta-2/360/360" alt="اثر گالریا"><span>Fig. 02</span></a>
+        <a href="#" class="insta-item reveal" data-reveal-delay="120"><img src="https://picsum.photos/seed/galleria2-insta-3/360/360" alt="اثر گالریا"><span>Fig. 03</span></a>
+        <a href="#" class="insta-item reveal" data-reveal-delay="180"><img src="https://picsum.photos/seed/galleria2-insta-4/360/360" alt="اثر گالریا"><span>Fig. 04</span></a>
+        <a href="#" class="insta-item reveal" data-reveal-delay="240"><img src="https://picsum.photos/seed/galleria2-insta-5/360/360" alt="اثر گالریا"><span>Fig. 05</span></a>
+        <a href="#" class="insta-item reveal" data-reveal-delay="300"><img src="https://picsum.photos/seed/galleria2-insta-6/360/360" alt="اثر گالریا"><span>Fig. 06</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container newsletter-inner reveal">
+      <p class="index-tag light">N°08 <span>—</span> خبرنامه گالریا</p>
+      <h2>اولین نفری باشید که آرشیو جدید را می‌بیند</h2>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" required placeholder="ایمیل شما" aria-label="ایمیل" id="newsletterEmail">
+        <button type="submit" class="btn btn-light">عضویت</button>
+      </form>
+      <p class="newsletter-note">با عضویت، <a href="#">قوانین حریم خصوصی</a> گالریا را می‌پذیرید.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="footer">
+  <div class="container footer-grid">
+    <div class="footer-col footer-brand">
+      <a href="#hero" class="logo">
+        <span class="logo-index">N°01</span>
+        <span class="logo-text">گالریا<em>ARCHIVE OF OBJECTS</em></span>
+      </a>
+      <p>خانه‌ای که هر گوشه‌اش داستانی برای گفتن دارد. مجسمه، ساعت، تابلو و آینه‌های دست‌ساز، مستقیم از کارگاه گالریا.</p>
+      <div class="social-row">
+        <a href="#" aria-label="اینستاگرام"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="تلگرام"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12l17-8-5 17-5.5-6L3 12z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></a>
+        <a href="#" aria-label="پینترست"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M9.5 17.5c1-3.5 1.7-6 2.4-8.6a1.9 1.9 0 0 1 3.7.6c0 1.7-1.1 4.2-1.7 5.4-.5 1 .1 1.9 1.2 1.9 1.9 0 3.4-2.4 3.4-4.9 0-2.6-1.9-4.6-4.9-4.6-3.3 0-5.4 2.4-5.4 5.1 0 1 .3 1.7.8 2.3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h5>۰۲ / دسته‌بندی‌ها</h5>
+      <ul>
+        <li><a href="#featured" data-cat-link="statue">مجسمه</a></li>
+        <li><a href="#featured" data-cat-link="clock">ساعت دیواری</a></li>
+        <li><a href="#featured" data-cat-link="art">تابلو دیواری</a></li>
+        <li><a href="#featured" data-cat-link="mirror">آینه دکوراتیو</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>۰۳ / خدمات مشتریان</h5>
+      <ul>
+        <li><a href="#">پیگیری سفارش</a></li>
+        <li><a href="#">راهنمای خرید</a></li>
+        <li><a href="#">شرایط بازگشت کالا</a></li>
+        <li><a href="#">سوالات متداول</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>۰۴ / تماس با گالریا</h5>
+      <ul class="contact-list">
+        <li>تهران، خیابان ولیعصر، کوچه هنر، پلاک ۱۴</li>
+        <li dir="ltr">021&#8209;9128&#8209;3300</li>
+        <li dir="ltr">hello@galleria-store.ir</li>
+        <li>شنبه تا پنجشنبه، ۹ تا ۱۹</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© <span id="year"></span> گالریا — همه حقوق محفوظ است</p>
+    <div class="payment-badges" aria-label="روش‌های پرداخت">
+      <span>شتاب</span><span>ملی</span><span>سامان</span><span>پارسیان</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="بازگشت به بالای صفحه">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<aside class="cart-drawer" id="cartDrawer" aria-label="سبد خرید">
+  <div class="cart-drawer-head">
+    <h3>سبد خرید</h3>
+    <button id="cartClose" aria-label="بستن سبد خرید">×</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty">سبد خرید شما خالی است.</p>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total-row"><span>جمع کل</span><span id="cartTotal">۰ تومان</span></div>
+    <a href="#" class="btn btn-primary btn-block">ادامه فرآیند خرید</a>
+  </div>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>
